@@ -37,6 +37,7 @@ function closeSlide() {
 
 
 // HOME API 
+getHomeMeal();
 async function getHomeMeal() {
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
     let data = await response.json();
@@ -58,7 +59,7 @@ function displayMeal(data) {
     }
     apiDisplay.innerHTML = cartona;
 }
-getHomeMeal();
+
 //api search by name
 async function getSearchByName(mealName) {
     $('#loading').fadeIn(500);
@@ -296,6 +297,7 @@ $('#contact').click(function () {
     closeSlide();
 })
 function displayContact() {
+    searchMeals.innerHTML='';
     apiDisplay.innerHTML = `<div class="container w-75">
         <div class="row pt-5 g-4">
             <div class="col-md-6">
