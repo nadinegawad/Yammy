@@ -165,9 +165,8 @@ function displayCategories(data) {
         <div onclick="getCategoriesMeals('${data[i].strCategory}')" class="img-layer rounded-2 position-relative overflow-hidden">
             <img class="w-100" src="${data[i].strCategoryThumb}" alt="">
             <div class="img-hover position-absolute text-center bottom-0">
-                <h3 class="mb-4">chicken</h3>
-                <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have
-                    been eating beef since prehistoric times.[1]</p>
+                <h3 class="mb-4">${data[i].strCategory}</h3>
+                <p>${data[i].strCategoryDescription}</p>
             </div>
         </div>
     </div>`
